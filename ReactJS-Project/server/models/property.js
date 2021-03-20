@@ -7,15 +7,16 @@ const propertySchema = mongoose.Schema({
     description: String,
     images: [String],
     initialPrice: Number,
-    startDate: Date,
-    endDate: Date,
+    startDate: String,
+    endDate: String,
     bid: {
        bidPrice: Number,
-       bidDate: Date(), 
+       bidDate: String(), 
     },
     isActive: Boolean,
 });
 
+// Create model from the above schema
 const Property = mongoose.model('Property', propertySchema);
 
 export default Property;
