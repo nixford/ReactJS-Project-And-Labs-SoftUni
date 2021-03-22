@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use('/properties', propertiesRoutes);
 
-const CONNECTION_URL = 'mongodb://localhost:27017/ReactSoftUni';
+const CONNECTION_URL = 'mongodb+srv://userDBReact:userDBReact123@cluster0.riesh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
