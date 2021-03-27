@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-// importing properties from reducers -> index.js
+// importing events from reducers -> index.js
 import events from './events';
 
 export const reducers = combineReducers({

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, CircularProgress } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 
-import Event from './Post/Post';
+import Event from './Event/Event';
 import useStyles from './styles';
 
 const Events = ({ setCurrentId }) => {

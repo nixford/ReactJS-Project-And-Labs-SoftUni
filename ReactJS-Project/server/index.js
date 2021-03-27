@@ -3,7 +3,7 @@ import bodyParser from 'body-parser'; // Body-parser is the Node.js body parsing
 import mongoose from 'mongoose';
 import cors from 'cors'; // Enables cross-origin requests
 
-import propertiesRoutes from './routes/properties.js';
+import eventsRoutes from './routes/events.js';
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))	
 app.use(cors());
 
-app.use('/properties', propertiesRoutes);
+app.use('/events', eventsRoutes);
 
 const CONNECTION_URL = 'mongodb+srv://userDBReact:userDBReact123@cluster0.riesh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
