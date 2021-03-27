@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/properties';
+const url = 'http://localhost:5000/events';
 
-export const fetchProperties = () => axios.get(url);
-export const createProperty = (newProperty) => axios.post(url, newProperty);
-export const likeProperty = (id) => axios.patch(`${url}/${id}/likeProperty`);
-export const updateProperty = (id, updatedProperty) => axios.patch(`${url}/${id}`, updatedProperty);
-export const deleteProperty = (id) => axios.delete(`${url}/${id}`);
+export const fetchEvents = () => axios.get(url);
+export const createEvent = (newEvent) => axios.post(url, newEvent);
+export const likeEvent = (id) => axios.patch(`${url}/${id}/likeEvent`);
+export const updateEvent = (id, updatedEvent) => axios.patch(`${url}/${id}`, updatedEvent);
+export const deleteEvent = (id) => axios.delete(`${url}/${id}`);

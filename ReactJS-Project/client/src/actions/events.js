@@ -4,9 +4,9 @@ import * as api from '../api/index.js';
 
 // Action Creators
 // It returns data from back-end(DB), therefore it is neccesery async/await
-export const getProperties = () => async (dispatch) => {
+export const getEvents = () => async (dispatch) => {
   try {
-    const { data } = await api.fetchProperties();
+    const { data } = await api.fetchEvents();
 
     dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
@@ -14,9 +14,9 @@ export const getProperties = () => async (dispatch) => {
   }
 };
 
-export const createProperty = (property) => async (dispatch) => {
+export const createEvent = (event) => async (dispatch) => {
   try {
-    const { data } = await api.createProperty(property);
+    const { data } = await api.createEvent(event);
 
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
@@ -24,9 +24,9 @@ export const createProperty = (property) => async (dispatch) => {
   }
 };
 
-export const updateProperty = (id, property) => async (dispatch) => {
+export const updateEvent = (id, event) => async (dispatch) => {
   try {
-    const { data } = await api.updateProperty(id, property);
+    const { data } = await api.updateEvent(id, event);
 
     dispatch({ type: UPDATE, payload: data });
   } catch (error) {
@@ -34,9 +34,9 @@ export const updateProperty = (id, property) => async (dispatch) => {
   }
 };
 
-export const likeProperty = (id) => async (dispatch) => {
+export const likeEvent = (id) => async (dispatch) => {
   try {
-    const { data } = await api.likeProperty(id);
+    const { data } = await api.likeEvent(id);
 
     dispatch({ type: LIKE, payload: data });
   } catch (error) {
@@ -44,9 +44,9 @@ export const likeProperty = (id) => async (dispatch) => {
   }
 };
 
-export const deleteProperty = (id) => async (dispatch) => {
+export const deleteEvent = (id) => async (dispatch) => {
   try {
-    await api.deleteProperty(id);
+    await api.deleteEvent(id);
 
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
